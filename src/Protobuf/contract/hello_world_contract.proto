@@ -4,11 +4,11 @@ import "aelf/options.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 // The namespace of this class
-option csharp_namespace = "AElf.Contracts.HelloWorld";
+option csharp_namespace = "AElf.Contracts.ACS404";
 
-service HelloWorld {
+service ACS404 {
   // The name of the state class the smart contract is going to use to access blockchain state
-  option (aelf.csharp_state) = "AElf.Contracts.HelloWorld.HelloWorldState";
+  option (aelf.csharp_state) = "AElf.Contracts.ACS404.ACS404State";
 
   // Actions (methods that modify contract state)
   // Stores the value in contract state

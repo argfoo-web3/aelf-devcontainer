@@ -1,10 +1,10 @@
 using AElf.Sdk.CSharp;
 using Google.Protobuf.WellKnownTypes;
 
-namespace AElf.Contracts.HelloWorld
+namespace AElf.Contracts.ACS404
 {
     // Contract class must inherit the base class generated from the proto file
-    public class HelloWorld : HelloWorldContainer.HelloWorldBase
+    public class ACS404 : ACS404Container.ACS404Base
     {
         // A method that modifies the contract state
         public override Empty Update(StringValue input)

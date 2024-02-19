@@ -1,10 +1,10 @@
 ﻿using AElf.Cryptography.ECDSA;
 using AElf.Testing.TestBase;
 
-namespace AElf.Contracts.HelloWorld
+namespace AElf.Contracts.ACS404
 {
     // The Module class load the context required for unit testing
-    public class Module : ContractTestModule<HelloWorld>
+    public class Module : ContractTestModule<ACS404>
     {
         
     }
@@ -13,18 +13,18 @@ namespace AElf.Contracts.HelloWorld
     public class TestBase : ContractTestBase<Module>
     {
         // The Stub class for unit testing
-        internal readonly HelloWorldContainer.HelloWorldStub HelloWorldStub;
+        internal readonly ACS404Container.ACS404Stub ACS404Stub;
         // A key pair that can be used to interact with the contract instance
         private ECKeyPair DefaultKeyPair => Accounts[0].KeyPair;
 
         public TestBase()
         {
-            HelloWorldStub = GetHelloWorldContractStub(DefaultKeyPair);
+            ACS404Stub = GetACS404ContractStub(DefaultKeyPair);
         }
 
-        private HelloWorldContainer.HelloWorldStub GetHelloWorldContractStub(ECKeyPair senderKeyPair)
+        private ACS404Container.ACS404Stub GetACS404ContractStub(ECKeyPair senderKeyPair)
         {
-            return GetTester<HelloWorldContainer.HelloWorldStub>(ContractAddress, senderKeyPair);
+            return GetTester<ACS404Container.ACS404Stub>(ContractAddress, senderKeyPair);
         }
     }
     
